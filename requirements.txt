@@ -1,0 +1,5 @@
+Package    Version
+---------- -------
+numpy      2.0.2
+pip        25.3
+setuptools 58.1.0
