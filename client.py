@@ -8,7 +8,7 @@ import hamming_module as hm
 
 UDP_PORT = 5005
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.connect(('localhost', UDP_PORT))
+# sock.connect(('localhost', UDP_PORT))
 
 while True:
     text = input()
@@ -32,4 +32,4 @@ while True:
 
         for sended in interleaved_blocks:
             data = ''.join(str(elem) for elem in sended)
-            sock.send(data.encode('utf-8'))
+            sock.sendto(data.encode('utf-8'), ('localhost', UDP_PORT))
